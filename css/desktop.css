@@ -1,0 +1,27 @@
+@media screen and (min-width: 1158px) {
+  .container and {
+    max-width: 1158px;
+  }
+  .customers > .container {
+    max-width: 1158px;
+  }
+
+  .customers {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+
+  .customers-item {
+    width: calc((100% - 120px) / 6);
+    height: 88px;
+    margin-top: 0;
+  }
+
+  .customers-title {
+    margin-bottom: 72px;
+  }
+
+  .customers-list {
+    gap: 72px 24px;
+  }
+}

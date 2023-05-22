@@ -42,7 +42,7 @@ body {
 }
 
 .container {
-  width: 1158px;
+  width: 100%;
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
@@ -321,8 +321,8 @@ body {
 
 /*-------------------CUSTOMERS-------------------*/
 .customers {
-  padding-top: 130px;
-  padding-bottom: 120px;
+  padding-top: 96px;
+  padding-bottom: 96px;
 }
 
 .customers-title {
@@ -332,17 +332,18 @@ body {
   text-align: center;
   letter-spacing: 0.02em;
   color: var(--modal-overlay-color);
-  margin-bottom: 72px;
 }
 
 .customers-list {
   display: flex;
-  gap: 24px;
+  flex-wrap: wrap;
+  gap: 16px;
 }
 
 .customers-item {
-  width: calc((100% - 120px) / 6);
+  width: calc((100% - 16px) / 2);
   height: 88px;
+  margin-top: 72px;
 }
 
 .customers-link {
@@ -779,4 +780,22 @@ body {
 
 .modal-field-checkbox {
   margin-bottom: 24px;
+}
+
+@media screen and (min-width: 480px) {
+  .container {
+    max-width: px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 766px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 1158px;
+  }
 }
