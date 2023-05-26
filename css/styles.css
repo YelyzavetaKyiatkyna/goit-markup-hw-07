@@ -231,28 +231,14 @@ body {
 /*--------------------DOING---------------------*/
 
 .doing {
-  padding-bottom: 120px;
-}
-.doing-title {
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.11;
-  letter-spacing: 0.02em;
-  text-transform: capitalize;
-  color: var(--dark-color);
-  text-align: center;
-  margin-bottom: 72px;
-}
-.doing-list {
-  display: flex;
-  gap: 24px;
+  display: none;
 }
 
 /*--------------------TEAM---------------------*/
 .team {
   background-color: var(--light-color);
-  padding-top: 120px;
-  padding-bottom: 110px;
+  padding-top: 96px;
+  padding-bottom: 96px;
 }
 .team-title {
   font-weight: 700;
@@ -266,13 +252,17 @@ body {
 }
 .team-list {
   display: flex;
-  gap: 24px;
+  flex-direction: column;
+  row-gap: 72px;
+  justify-content: center;
+  align-items: center;
 }
 .team-item {
   background-color: var(--additional-color);
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
   border-radius: 0px 0px 4px 4px;
+  width: 264px;
 }
 .team-item-wrap {
   padding-top: 32px;
@@ -371,8 +361,9 @@ body {
 /*--------------------FOOTER---------------------*/
 .footer {
   background-color: var(--hero-background);
-  padding-top: 100px;
-  padding-bottom: 100px;
+  padding: 96px 0;
+  display: flex;
+  flex-wrap: wrap;
 }
 .footer-logo {
   font-family: Raleway, sans-serif;
@@ -382,6 +373,9 @@ body {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--light-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .footer-logo-part {
   color: var(--primary-brand-color);
@@ -390,19 +384,28 @@ body {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--accent-color);
-  width: 264px;
   margin-top: 16px;
 }
 .footer-container {
   display: flex;
-  align-items: baseline;
+  flex-direction: column;
+  row-gap: 72px;
+  justify-content: center;
+  align-items: center;
 }
 .footer-left {
-  margin-right: 120px;
+  margin: 0 auto;
+  max-width: 268px;
+  display: flex;
+  flex-direction: column;
 }
+
 .footer-soc {
-  margin-right: 80px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
 }
+
 .footer-soc-title {
   font-weight: 500;
   font-size: 16px;
@@ -410,6 +413,9 @@ body {
   letter-spacing: 0.02em;
   color: var(--additional-color);
   margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .footer-soc-list {
   display: flex;
@@ -437,12 +443,18 @@ body {
   background-color: var(--success-color);
 }
 .footer-form {
+  margin: 0 auto;
 }
 .subscribe {
   display: flex;
-  gap: 24px;
+  flex-direction: column;
+  row-gap: 16px;
+  align-items: center;
 }
 .subscribe-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.02em;
@@ -450,7 +462,7 @@ body {
   margin-bottom: 16px;
 }
 .subscribe-input {
-  width: 264px;
+  width: 290px;
   height: 40px;
   font-size: 12px;
   color: var(--accent-color);
@@ -469,6 +481,7 @@ body {
   color: rgba(255, 255, 255, 0.6);
 }
 .submit-btn {
+  width: 165px;
   font-family: inherit;
   font-weight: 500;
   font-size: 16px;

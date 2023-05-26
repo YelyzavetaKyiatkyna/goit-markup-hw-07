@@ -12,9 +12,36 @@
   }
 
   .features-list {
-    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     column-gap: 24px;
+  }
+  .features-item {
+    width: 356px;
+  }
+
+  .team-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 24px;
+    row-gap: 64px;
+  }
+
+  .footer-container {
+    margin: 0 auto;
+    padding-left: 108px;
+  }
+
+  .footer-left {
+    margin: 0;
+    max-width: 264px;
+  }
+
+  .footer-logo {
+    justify-content: flex-start;
+  }
+
+  .footer-text {
+    width: 264px;
   }
 }
