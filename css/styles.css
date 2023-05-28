@@ -53,6 +53,10 @@ body {
 .list {
   list-style: none;
 }
+
+.no-scroll {
+  overflow: hidden;
+}
 .visually-hidden {
   position: absolute;
   white-space: nowrap;
@@ -69,8 +73,8 @@ body {
 /*--------------------HEADER---------------------*/
 
 .header {
-  padding-top: 24px;
-  padding-bottom: 24px;
+  padding-top: 16px;
+  padding-bottom: 16px;
   border-bottom: 1px solid var(--header-border-color);
 }
 .header-container {
@@ -96,83 +100,167 @@ body {
   color: var(--primary-brand-color);
 }
 
-.header-list {
-  display: flex;
-  gap: 40px;
+.header-list,
+.header-address-list {
+  display: none;
+}
+.menu-toggle {
+  display: block;
+  margin-left: auto;
+  border: none;
+  background-color: transparent;
 }
 
-.header-link {
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.5;
+/*---------------MOBILE------------------------*/
+
+.mob-menu {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: var(--additional-color);
+  padding: 80px 37px 40px 40px;
+}
+
+.mob-close {
+  width: 24px;
+  height: 24px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: var(--accent-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  padding: 0;
+  cursor: pointer;
+  position: absolute;
+  top: 24px;
+  right: 24px;
+}
+.mob-close:is(:hover, :focus) {
+  background-color: var(--pressed-state-color);
+}
+.mob-close-button {
+  transition: fill var(--hover-transition);
+}
+
+.mob-close:is(:hover, :focus) .modal-close-button {
+  fill: var(--additional-color);
+}
+.mob-menu-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  overflow-y: auto;
+}
+
+.mob-list {
+  display: flex;
+  gap: 40px;
+  flex-direction: column;
+  padding-bottom: 40px;
+}
+
+.mob-link {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: calc(40 / 36);
   letter-spacing: 0.02em;
   color: var(--dark-color);
   transition: color var(--hover-transition);
-  position: relative;
-}
-.header-link:hover,
-.header-link:focus,
-.header-link.current {
-  color: var(--pressed-state-color);
-}
-.header-link:active {
-  color: var(--pressed-state-color);
-}
-.current::after {
-  content: "";
-  display: block;
-  position: absolute;
-  width: 100%;
-  height: 4px;
-  border-radius: 2px;
-  left: 0;
-  bottom: -27px;
-  background-color: var(--pressed-state-color);
-  pointer-events: none;
-}
-.header-address {
-  font-style: normal;
-}
-.header-address-list {
-  display: flex;
-  gap: 40px;
 }
 
-.header-address-link {
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-  color: var(--text-color);
-  transition: color var(--hover-transition);
-}
-.header-address-link:hover,
-.header-address-link:focus {
+.mob-link:hover,
+.mob-link:focus,
+.mob-link.current {
   color: var(--pressed-state-color);
+}
+.mob-link:active {
+  color: var(--pressed-state-color);
+}
+
+.mob-tel-link {
+  display: block;
+  margin-bottom: 40px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: calc(40 / 36);
+  font-style: normal;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+}
+.mob-email-link {
+  display: block;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  font-style: normal;
+  color: var(--text-color);
+}
+
+.mob-soc-list {
+  display: flex;
+  gap: 28px;
+  margin-top: 52px;
+}
+
+.mob-soc-item {
+  width: 40px;
+  height: 40px;
+}
+.mob-soc-link {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--primary-brand-color);
+  fill: var(--light-color);
+  transition-property: background-color;
+  transition: background-color var(--hover-transition);
+}
+
+.mob-soc-link:is(:hover, :focus) {
+  background-color: var(--success-color);
 }
 
 /*--------------------HERO---------------------*/
 .hero {
   background-color: var(--hero-background);
-  padding-top: 188px;
-  padding-bottom: 188px;
+  padding-top: 112px;
+  padding-bottom: 112px;
   text-align: center;
-  background-image: var(--lgdt-hero), url(../images/hero-bgd-min.jpg);
+  background-image: var(--lgdt-hero), url(../images/hero-bg-phone-min.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  max-width: 1440px;
+  max-width: 428px;
   margin: 0 auto;
+}
+
+@media (min-device-pixel-ratio: 2),
+  (-webkit-min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .hero {
+    background-image: var(--lgdt-hero), url(../images/hero-bg-phone2x-min.jpg);
+  }
 }
 
 .hero-title {
   margin: auto;
   font-weight: 700;
-  font-size: 56px;
-  line-height: 1.07;
+  font-size: 36px;
+  line-height: 1.11;
   letter-spacing: 0.02em;
   color: var(--additional-color);
-  margin-bottom: 48px;
-  width: 496px;
+  margin-bottom: 72px;
+  width: 300px;
 }
 .hero-btn {
   font-family: inherit;
@@ -362,8 +450,6 @@ body {
 .footer {
   background-color: var(--hero-background);
   padding: 96px 0;
-  display: flex;
-  flex-wrap: wrap;
 }
 .footer-logo {
   font-family: Raleway, sans-serif;
@@ -373,9 +459,6 @@ body {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--light-color);
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 .footer-logo-part {
   color: var(--primary-brand-color);
@@ -443,18 +526,13 @@ body {
   background-color: var(--success-color);
 }
 .footer-form {
-  margin: 0 auto;
 }
 .subscribe {
   display: flex;
-  flex-direction: column;
   row-gap: 16px;
-  align-items: center;
 }
+
 .subscribe-title {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.02em;
@@ -489,6 +567,7 @@ body {
   letter-spacing: 0.04em;
   color: var(--additional-color);
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   padding: 8px 24px;
@@ -618,7 +697,7 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) skew(0);
-  width: 408px;
+  width: 310px;
   min-height: 584px;
   background-color: var(--modal-bg-color);
   padding: 24px;
@@ -731,7 +810,7 @@ body {
   color: rgba(117, 117, 117, 0.5);
 }
 .check-text {
-  font-size: 12px;
+  font-size: 9px;
   line-height: 1.33;
   letter-spacing: 0.04em;
   color: #757575;

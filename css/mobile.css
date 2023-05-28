@@ -3,7 +3,45 @@
     max-width: 426px;
   }
 
-  .subscribe-input {
-    width: 398px;
+  .hero-title {
+    width: 320px;
+  }
+  .mob-tel-link {
+    font-size: 36px;
+  }
+  .mob-soc-list {
+    gap: 56px;
+  }
+
+  .modal {
+    width: 408px;
+  }
+
+  .check-text {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .tablet-cont {
+    display: flex;
+    gap: 72px;
+    flex-direction: column;
+  }
+  .footer-logo {
+    text-align: center;
+  }
+
+  .footer-form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .subscribe-title {
+    text-align: center;
+  }
+  .subscribe {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 }

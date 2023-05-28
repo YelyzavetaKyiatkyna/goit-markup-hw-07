@@ -25,7 +25,7 @@
   </head>
 
   <body>
-    <!-- <header class="header">
+    <header class="header">
       <div class="container header-container">
         <nav class="header-navigation">
           <a class="header-logo link" href="./index.html"
@@ -60,18 +60,108 @@
             </li>
           </ul>
         </address>
+
+        <button class="menu-toggle" data-menu-open>
+          <svg
+            width="32"
+            height="22"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+              clip-rule="evenodd"
+            ></path>
+          </svg>
+        </button>
       </div>
-    </header> -->
+
+      <div class="mob-menu is-hidden" data-menu>
+        <button type="button" class="mob-close" data-menu-close>
+          <svg class="mob-close-button" width="8" height="8">
+            <use href="./images/icons.svg#icon-close-button"></use>
+          </svg>
+        </button>
+
+        <div class="mob-menu-group">
+          <div>
+            <ul class="mob-list list">
+              <li class="mob-item">
+                <a class="mob-link link current" href="./index.html">Studio</a>
+              </li>
+              <li class="mob-item">
+                <a class="mob-link link" href="./portfolio.html">Portfolio</a>
+              </li>
+              <li class="mob-item">
+                <a class="mob-link link" href="">Contacts</a>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <address class="mob-address">
+              <ul class="mob-address-list list">
+                <li class="mob-address-item">
+                  <a class="mob-tel-link link" href="tel:+110001111111"
+                    >+11 (000) 111-11-11</a
+                  >
+                </li>
+                <li class="mob-address-item">
+                  <a
+                    class="mob-email-link link"
+                    href="mailto:info@devstudio.com"
+                    >info@devstudio.com</a
+                  >
+                </li>
+              </ul>
+            </address>
+
+            <ul class="mob-soc-list list">
+              <li class="mob-soc-item">
+                <a href="" class="mob-soc-link">
+                  <svg class="mob-soc-icon" width="24" height="24">
+                    <use href="./images/icons.svg#icon-instagram"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="mob-soc-item">
+                <a href="" class="mob-soc-link">
+                  <svg class="mob-soc-icon" width="24" height="24">
+                    <use href="./images/icons.svg#icon-twitter"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="mob-soc-item">
+                <a href="" class="mob-soc-link">
+                  <svg class="mob-soc-icon" width="24" height="24">
+                    <use href="./images/icons.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="mob-soc-item">
+                <a href="" class="mob-soc-link">
+                  <svg class="mob-soc-icon" width="24" height="24">
+                    <use href="./images/icons.svg#icon-linkedin"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
 
     <main>
-      <!-- <section class="hero">
+      <section class="hero">
         <div class="container">
           <h1 class="hero-title">Effective Solutions for Your Business</h1>
           <button class="hero-btn" type="button" data-modal-open>
             Order Service
           </button>
         </div>
-      </section> -->
+      </section>
 
       <section class="features">
         <div class="container">
@@ -139,12 +229,18 @@
 
           <ul class="doing-list list">
             <li>
-              <img src="./images/img1.jpg" alt="Computer display" width="360" />
+              <img
+                srcset="./images/img1-min.jpg 1x, ./images/doing1-2x-min.jpg 2x"
+                src="./images/img1-min.jpg"
+                alt="Computer display"
+                width="360"
+              />
             </li>
 
             <li>
               <img
-                src="./images/img2.jpg"
+                srcset="./images/img2-min.jpg 2x, ./images/doing2-2x-min.jpg 2x"
+                src="./images/img2-min.jpg"
                 alt="Cell phone showing the app"
                 width="360"
               />
@@ -152,7 +248,8 @@
 
             <li>
               <img
-                src="./images/img3.jpg"
+                srcset="./images/img3-min.jpg 1x, ./images/doing3-2x-min.jpg 2x"
+                src="./images/img3-min.jpg"
                 alt="Cell phone with an open web page"
                 width="360"
               />
@@ -168,6 +265,10 @@
             <li class="team-item">
               <img
                 src="./images/img-photo1.jpg"
+                srcset="
+                  ./images/img-photo1.jpg   1x,
+                  ./images/imgteam1-min.jpg 2x
+                "
                 alt="Mark Guerrero"
                 width="264"
               />
@@ -208,7 +309,15 @@
             </li>
 
             <li class="team-item">
-              <img src="./images/img-photo2.jpg" alt="Tom Ford" width="264" />
+              <img
+                src="./images/img-photo2.jpg"
+                alt="Tom Ford"
+                width="264"
+                srcset="
+                  ./images/img-photo2.jpg   1x,
+                  ./images/imgteam2-min.jpg 2x
+                "
+              />
               <div class="team-item-wrap">
                 <h3 class="team-item-title">Tom Ford</h3>
                 <p class="team-item-text">Frontend Developer</p>
@@ -250,6 +359,10 @@
                 src="./images/img-photo3.jpg"
                 alt="Camila Garcia"
                 width="264"
+                srcset="
+                  ./images/img-photo3.jpg   1x,
+                  ./images/imgteam3-min.jpg 2x
+                "
               />
               <div class="team-item-wrap">
                 <h3 class="team-item-title">Camila Garcia</h3>
@@ -292,6 +405,10 @@
                 src="./images/img-photo4.jpg"
                 alt="Daniel Wilson"
                 width="264"
+                srcset="
+                  ./images/img-photo4.jpg   1x,
+                  ./images/imgteam4-min.jpg 2x
+                "
               />
               <div class="team-item-wrap">
                 <h3 class="team-item-title">Daniel Wilson</h3>
@@ -462,47 +579,49 @@
 
     <footer class="footer">
       <div class="container footer-container">
-        <div class="footer-left">
-          <a class="footer-logo link" href="./index.html">
-            <span class="footer-logo-part">Web</span>Studio</a
-          >
-          <p class="footer-text">
-            Increase the flow of customers and sales for your business with
-            digital marketing & growth solutions.
-          </p>
-        </div>
-        <div class="footer-soc">
-          <p class="footer-soc-title">Social media</p>
-          <ul class="footer-soc-list list">
-            <li class="footer-soc-item">
-              <a href="" class="footer-soc-link">
-                <svg class="footer-soc-icon" width="24" height="24">
-                  <use href="./images/icons.svg#icon-instagram"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="footer-soc-item">
-              <a href="" class="footer-soc-link">
-                <svg class="footer-soc-icon" width="24" height="24">
-                  <use href="./images/icons.svg#icon-twitter"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="footer-soc-item">
-              <a href="" class="footer-soc-link">
-                <svg class="footer-soc-icon" width="24" height="24">
-                  <use href="./images/icons.svg#icon-facebook"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="footer-soc-item">
-              <a href="" class="footer-soc-link">
-                <svg class="footer-soc-icon" width="24" height="24">
-                  <use href="./images/icons.svg#icon-linkedin"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
+        <div class="tablet-cont">
+          <div class="footer-left">
+            <a class="footer-logo link" href="./index.html">
+              <span class="footer-logo-part">Web</span>Studio</a
+            >
+            <p class="footer-text">
+              Increase the flow of customers and sales for your business with
+              digital marketing & growth solutions.
+            </p>
+          </div>
+          <div class="footer-soc">
+            <p class="footer-soc-title">Social media</p>
+            <ul class="footer-soc-list list">
+              <li class="footer-soc-item">
+                <a href="" class="footer-soc-link">
+                  <svg class="footer-soc-icon" width="24" height="24">
+                    <use href="./images/icons.svg#icon-instagram"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="footer-soc-item">
+                <a href="" class="footer-soc-link">
+                  <svg class="footer-soc-icon" width="24" height="24">
+                    <use href="./images/icons.svg#icon-twitter"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="footer-soc-item">
+                <a href="" class="footer-soc-link">
+                  <svg class="footer-soc-icon" width="24" height="24">
+                    <use href="./images/icons.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="footer-soc-item">
+                <a href="" class="footer-soc-link">
+                  <svg class="footer-soc-icon" width="24" height="24">
+                    <use href="./images/icons.svg#icon-linkedin"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
         <div class="footer-form">
           <p class="subscribe-title">Subscribe</p>
@@ -525,5 +644,6 @@
       </div>
     </footer>
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>
